@@ -17,4 +17,4 @@ GET http://localhost:3000/users
 ###
 
 ### Get User By ID
-GET http://localhost:3000/users/USER_ID_HERE
+GET http://localhost:3000/users/d0e0aa45-9b2d-4e02-aedd-a621819b414c

@@ -1,16 +1,18 @@
+import {
+  dataSourceOptions,
+  DEFAULT_CONNECTION,
+} from 'src/config/database.config';
 import { DataSource } from 'typeorm';
-import { DEFAULT_CONNECTION, getDefaultConnection } from './dataSourceOptions';
-
-export const AppDataSource = new DataSource(getDefaultConnection());
 
 export const databaseProviders = [
   {
     provide: DEFAULT_CONNECTION,
     useFactory: async () => {
-      if (!AppDataSource.isInitialized) {
-        await AppDataSource.initialize();
+      const dataSource = new DataSource(dataSourceOptions);
+      if (!dataSource.isInitialized) {
+        await dataSource.initialize();
       }
-      return AppDataSource;
+      return dataSource;
     },
   },
 ];
