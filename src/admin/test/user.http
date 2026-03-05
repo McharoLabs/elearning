@@ -3,7 +3,7 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "email": "john1@example.com",
+  "email": "john@example.com",
   "firstName": "John",
   "lastName": "Doe",
   "password": "123456"
@@ -17,4 +17,4 @@ GET http://localhost:3000/users
 ###
 
 ### Get User By ID
-GET http://localhost:3000/users/d0e0aa45-9b2d-4e02-aedd-a621819b414c
+GET http://localhost:3000/users/4001c942-32c9-4cdb-9b75-3a95b93b2078

@@ -5,6 +5,7 @@ import { UsersController } from './controllers/users.controller';
 import { UsersService } from '@mcharolabs/elearning-core';
 
 @Module({
+  imports: [],
   controllers: [AdminController, UsersController],
   providers: [AdminService, UsersService],
 })
